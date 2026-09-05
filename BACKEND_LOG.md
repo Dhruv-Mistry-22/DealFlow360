@@ -4,3 +4,4 @@
 - Backend Commit 4: Add User authentication
 - Backend Commit 5: Create Catalog API endpoints
 - Backend Commit 6: Implement Quotes service
+- Backend Commit 7: Add Risk Engine logic
