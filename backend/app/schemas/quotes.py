@@ -1,17 +1,17 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from app.models.quote import QuoteStatus, ApprovalLevel
 
 
 class QuoteLineCreate(BaseModel):
     product_id: int
-    quantity: int = 1
-    discount_given: float = 0.0
+    quantity: int = Field(default=1, ge=1)
+    discount_given: float = Field(default=0.0, ge=0.0, le=100.0)
     variant_id: int | None = None
 
 
 class QuoteLineUpdate(BaseModel):
-    quantity: int | None = None
-    discount_given: float | None = None
+    quantity: int | None = Field(default=None, ge=1)
+    discount_given: float | None = Field(default=None, ge=0.0, le=100.0)
 
 
 class FulfillmentSplitOut(BaseModel):

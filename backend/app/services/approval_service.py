@@ -60,6 +60,12 @@ def approve(
     if approver.role == UserRole.SALES_MANAGER:
         approval = _get_pending_approval(db, quote_id, "MANAGER")
     elif approver.role == UserRole.FINANCE:
+        # Check if MANAGER approval is still pending (sequential approval)
+        manager_pending = _get_pending_approval(db, quote_id, "MANAGER")
+        if manager_pending:
+            raise HTTPException(
+                status_code=400, detail="Manager must approve before Finance"
+            )
         approval = _get_pending_approval(db, quote_id, "FINANCE")
     elif approver.role == UserRole.ADMIN:
         # Admin can action any pending approval
