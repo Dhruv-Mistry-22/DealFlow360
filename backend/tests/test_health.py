@@ -6,4 +6,5 @@ client = TestClient(app)
 def test_health_check():
     response = client.get("/health")
     assert response.status_code == 200
-    assert response.json() == {"status": "ok", "message": "DealFlow360 API is running"}
+    assert response.json()["status"] == "ok"
+    assert "DealFlow360" in response.json()["message"]

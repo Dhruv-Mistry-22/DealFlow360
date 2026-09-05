@@ -57,3 +57,7 @@ venv.bak/
 # Local PDFs
 Documnet/
 PS/
+
+# Database
+*.db
+*.sqlite3
