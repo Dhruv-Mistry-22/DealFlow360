@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#B02116", "on-surface": "#001d32", "on-error-container": "#93000a", "on-secondary-container": "#113047", "secondary-container": "#84c4fe", "inverse-primary": "#95ccff", "on-primary-container": "#18669B", "surface-container-low": "#edf4ff", "primary-container": "#EAF6FC", "primary": "#006196", "surface-container-lowest": "#ffffff", "error-container": "#FDECEA", "outline": "#DCE6EC", "secondary-fixed": "#cee5ff", "inverse-on-surface": "#e7f2ff", "outline-variant": "#E7EEF3", "tertiary-fixed-dim": "#ffb4a3", "secondary": "#116398", "surface-container-highest": "#cde5ff", "surface-container-high": "#d7eaff", "on-error": "#FFFFFF", "primary-fixed-dim": "#95ccff", "surface": "#FFFFFF", "tertiary-container": "#dc3207", "surface-container": "#e2efff", "on-primary": "#ffffff", "surface-variant": "#F1F5F8", "tertiary": "#b22400", "surface-bright": "#f7f9ff", "on-primary-fixed": "#001d32", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#004a75", "on-background": "#001d32", "on-surface-variant": "#404850", "on-secondary-fixed-variant": "#004a76", "inverse-surface": "#14334a", "on-secondary-fixed": "#001d33", "background": "#F7F9FB", "surface-tint": "#006399", "surface-dim": "#c0ddfb", "primary-fixed": "#cde5ff", "tertiary-fixed": "#ffdad2", "on-tertiary-fixed": "#3d0600", "on-secondary": "#ffffff", "error": "#B02116", "secondary-fixed-dim": "#96ccff", "on-tertiary-fixed-variant": "#8b1a00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "spacing-2xs": "0.25rem", "margin-desktop": "2rem", "margin-mobile": "1rem", "spacing-md": "1rem", "spacing-xs": "0.5rem", "spacing-xl": "2rem", "gutter": "1rem", "spacing-lg": "1.5rem", "spacing-sm": "0.75rem", "spacing-2xl": "3rem" }, "fontFamily": { "title-small": [ "Inter" ], "label-small": [ "Inter" ], "title-large-mobile": [ "Inter" ], "body-medium": [ "Inter" ], "label-large": [ "Inter" ], "label-medium": [ "Inter" ], "body-large": [ "Inter" ], "body-small": [ "Inter" ], "title-large": [ "Inter" ], "title-medium": [ "Inter" ] }, "fontSize": { "title-small": [ "18px", { "lineHeight": "1.4", "fontWeight": "600" } ], "label-small": [ "11px", { "lineHeight": "1.3", "fontWeight": "500" } ], "title-large-mobile": [ "26px", { "lineHeight": "1.25", "fontWeight": "800" } ], "body-medium": [ "14px", { "lineHeight": "1.5", "fontWeight": "400" } ], "label-large": [ "14px", { "lineHeight": "1.4", "fontWeight": "600" } ], "label-medium": [ "12px", { "lineHeight": "1.4", "fontWeight": "600" } ], "body-large": [ "16px", { "lineHeight": "1.5", "fontWeight": "500" } ], "body-small": [ "12px", { "lineHeight": "1.5", "fontWeight": "400" } ], "title-large": [ "32px", { "lineHeight": "1.2", "fontWeight": "800" } ], "title-medium": [ "24px", { "lineHeight": "1.3", "fontWeight": "700" } ] } } } };</script></head><body class="bg-background font-body-medium text-body-medium text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-72 bg-surface border-r border-outline z-40 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-spacing-lg flex items-center gap-spacing-sm border-b border-outline shrink-0"><img alt="Modern logistics-style corporate logo: orange/red energetic abstract forward arrow combined with crisp white DealFlow and vibrant orange 360 wordmark. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UbrKs25GMIxvP4fE-xl3ODYmgBSSnktRTGUwHwMPv3UMekwuUTR0uxj62P_MJZhQZe-TQQLpNEi2QWOt5e-7H7s0PtbnYUBCAFjYNP3_aF8xxhpx5AGSoZnFyIk8zXGFdtr4z06NxEUdFEhs6tJKOk9auK_7ihTk7AgTj8mCCEdWWp-aM3S_fTzKmuvbme11mj8NKHmZ-2ipW2FU73s_avNAg4ZkAvcmWpN-2TM3jq-AxmCKRqSgXiYhM7"/><div class="flex items-baseline tracking-tight font-title-small text-title-small"><span class="text-on-secondary-container font-extrabold">DealFlow</span><span class="text-tertiary-container font-black ml-0.5">360</span></div></div><div class="px-spacing-md pt-spacing-sm pb-spacing-xs shrink-0"><div class="flex items-center justify-between px-spacing-sm py-spacing-xs rounded-lg bg-surface-variant border border-outline"><div class="flex items-center gap-spacing-xs"><span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-small text-label-small text-on-surface-variant uppercase tracking-wider font-semibold">Telemetry</span></div><span class="font-label-small text-label-small text-on-primary-container font-semibold">SLA 99.98% Operational</span></div></div><nav class="flex-1 overflow-y-auto px-spacing-sm py-spacing-xs space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-large font-bold border border-secondary-container"><a class="flex items-center gap-spacing-sm px-spacing-sm py-spacing-xs rounded-lg font-label-large text-label-large text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard / Overview</span></a><a class="flex items-center gap-spacing-sm px-spacing-sm py-spacing-xs rounded-lg font-label-large text-label-large text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="quotations" href="#"><span class="material-symbols-outlined text-[20px]">request_quote</span><span>Quotations</span></a><a class="flex items-center gap-spacing-sm px-spacing-sm py-spacing-xs rounded-lg font-label-large text-label-large text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="approvals" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span>Approvals</span></a><a class="flex items-center gap-spacing-sm px-spacing-sm py-spacing-xs rounded-lg font-label-large text-label-large text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="fulfillment" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span>Fulfillment</span></a><a class="flex items-center gap-spacing-sm px-spacing-sm py-spacing-xs rounded-lg font-label-large text-label-large text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="billing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Invoices &amp; Billing</span></a><a aria-current="page" class="flex items-center gap-spacing-sm px-spacing-sm py-spacing-xs rounded-lg transition-colors bg-primary-container text-on-primary-container font-label-large font-bold border border-secondary-container" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Customer Portal</span></a><a class="flex items-center gap-spacing-sm px-spacing-sm py-spacing-xs rounded-lg font-label-large text-label-large text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="products" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Products &amp; Catalog</span></a><a class="flex items-center gap-spacing-sm px-spacing-sm py-spacing-xs rounded-lg font-label-large text-label-large text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="deal-health" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Deal Health &amp; Risk</span></a><a class="flex items-center gap-spacing-sm px-spacing-sm py-spacing-xs rounded-lg font-label-large text-label-large text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="admin" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span>Admin &amp; Governance</span></a></nav></div><div class="p-spacing-md border-t border-outline bg-surface shrink-0"><div class="flex items-center gap-spacing-sm p-spacing-xs rounded-lg hover:bg-surface-variant transition-colors cursor-pointer"><div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-large text-label-large shrink-0 shadow-sm">MV</div><div class="flex flex-col min-w-0 flex-1"><div class="font-label-large text-label-large text-on-surface truncate font-bold">Marcus Vance</div><div class="font-body-small text-body-small text-on-surface-variant truncate">VP Sales Operations</div><div class="font-label-small text-label-small text-primary truncate font-medium">TransCargo Alliance</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface border-b border-outline z-30 flex items-center justify-between px-spacing-xl"><div class="flex items-center gap-spacing-md"><img alt="Modern logistics-style corporate logo: orange/red energetic abstract forward arrow combined with crisp white DealFlow and vibrant orange 360 wordmark. Brand logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UbrKs25GMIxvP4fE-xl3ODYmgBSSnktRTGUwHwMPv3UMekwuUTR0uxj62P_MJZhQZe-TQQLpNEi2QWOt5e-7H7s0PtbnYUBCAFjYNP3_aF8xxhpx5AGSoZnFyIk8zXGFdtr4z06NxEUdFEhs6tJKOk9auK_7ihTk7AgTj8mCCEdWWp-aM3S_fTzKmuvbme11mj8NKHmZ-2ipW2FU73s_avNAg4ZkAvcmWpN-2TM3jq-AxmCKRqSgXiYhM7"/><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-80 h-10 pl-9 pr-14 bg-surface-variant border border-outline rounded-lg text-body-medium font-body-medium text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary" placeholder="Search deals, invoices, telemetry..." type="text"/><kbd class="absolute right-3 px-1.5 py-0.5 rounded bg-surface border border-outline font-label-small text-label-small text-on-surface-variant font-mono shadow-sm">⌘K</kbd></div></div><div class="flex items-center gap-spacing-md"><div class="hidden xl:flex items-center gap-spacing-xs px-spacing-sm py-spacing-xs rounded-full bg-primary-container border border-outline"><span class="material-symbols-outlined text-on-primary-container text-[16px]">cloud_done</span><span class="font-label-small text-label-small text-on-primary-container font-semibold">Engine: v4.8 Active</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-tertiary-container"></span></button><button class="flex items-center gap-spacing-xs px-spacing-md py-spacing-xs bg-tertiary-container hover:bg-tertiary text-on-tertiary rounded-lg font-label-large text-label-large shadow-sm transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Quotation</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 min-h-screen bg-background px-spacing-xl py-spacing-lg"><div class="flex flex-col w-full gap-spacing-xl">
+<!-- Top Breadcrumb & Executive Title Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-spacing-md">
+<div class="flex flex-col gap-spacing-2xs">
+<div class="flex items-center gap-spacing-xs font-label-small text-label-small text-on-surface-variant">
+<span>Operations</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Customers</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Customer Portal Hub</span>
+</div>
+<h1 class="font-title-large text-title-large text-on-surface tracking-tight">Customer Portal &amp; Account 360</h1>
+<p class="font-body-medium text-body-medium text-on-surface-variant max-w-3xl">
+        Manage institutional accounts, shipper master credit lines, active contract commitments, and dedicated logistics contacts.
+      </p>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-spacing-sm shrink-0">
+<button class="flex items-center gap-spacing-xs px-spacing-md py-spacing-xs rounded-lg bg-surface text-on-surface hover:bg-surface-variant transition-colors shadow-sm font-label-large text-label-large" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export CRM Data</span>
+</button>
+<button class="flex items-center gap-spacing-xs px-spacing-md py-spacing-xs rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary transition-colors shadow-md font-label-large text-label-large" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Add Institutional Customer</span>
+</button>
+</div>
+</div>
+<!-- Bento KPI Row (4 Modular Metric Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-spacing-lg">
+<!-- Card 1 -->
+<div class="bg-surface p-spacing-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-small text-label-small text-on-surface-variant uppercase tracking-wider font-semibold">Active Client Accounts</span>
+<div class="flex items-baseline gap-spacing-xs mt-spacing-xs">
+<span class="font-title-large text-title-large text-on-secondary-container">142</span>
+<span class="font-label-medium text-label-medium text-on-surface-variant">Shippers</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">corporate_fare</span>
+</div>
+</div>
+<div class="mt-spacing-md pt-spacing-sm flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-small text-label-small text-primary font-bold bg-primary-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +8 this quarter
+        </span>
+<span class="font-body-small text-body-small text-on-surface-variant">99.1% Retention</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface p-spacing-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-small text-label-small text-on-surface-variant uppercase tracking-wider font-semibold">Underwritten Facility</span>
+<div class="flex items-baseline gap-spacing-xs mt-spacing-xs">
+<span class="font-title-large text-title-large text-on-secondary-container">$68.5M</span>
+<span class="font-label-medium text-label-medium text-on-surface-variant">Allocated</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+</div>
+<div class="mt-spacing-md space-y-1.5">
+<div class="flex items-center justify-between font-label-small text-label-small">
+<span class="text-on-surface-variant">73.4% Facility Deployed</span>
+<span class="text-primary font-semibold">$18.2M Available</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full" style="width: 73.4%"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface p-spacing-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-small text-label-small text-on-surface-variant uppercase tracking-wider font-semibold">30-Day Contract Volume</span>
+<div class="flex items-baseline gap-spacing-xs mt-spacing-xs">
+<span class="font-title-large text-title-large text-on-secondary-container">$34.2M</span>
+<span class="font-label-medium text-label-medium text-on-surface-variant">Booked</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</div>
+</div>
+<div class="mt-spacing-md pt-spacing-sm flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-small text-label-small text-primary font-bold bg-primary-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">speed</span> +14.2% pacing
+        </span>
+<span class="font-body-small text-body-small text-on-surface-variant">1,482 Dispatches</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface p-spacing-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-small text-label-small text-on-surface-variant uppercase tracking-wider font-semibold">Payment Reliability</span>
+<div class="flex items-baseline gap-spacing-xs mt-spacing-xs">
+<span class="font-title-large text-title-large text-on-secondary-container">98.6%</span>
+<span class="font-label-medium text-label-medium text-on-surface-variant">On-Time</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+</div>
+<div class="mt-spacing-md pt-spacing-sm flex items-center justify-between">
+<span class="font-label-small text-label-small text-on-surface-variant">Net-30 / Net-60 Compliance</span>
+<span class="font-label-small text-label-small text-primary font-bold">Grade A1 Safe</span>
+</div>
+</div>
+</div>
+<!-- Search & Filter Ribbon Bar -->
+<div class="bg-surface p-spacing-md rounded-xl shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-spacing-md">
+<div class="flex flex-wrap items-center gap-spacing-sm flex-1 min-w-0">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-variant rounded-lg font-body-medium text-body-medium text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" id="shipperSearchInput" placeholder="Search by Shipper Name, Account ID, Tier, Industry, or Lead..." type="text"/>
+</div>
+<!-- Filter: Tier -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 bg-surface-variant rounded-lg font-label-medium text-label-medium text-on-surface appearance-none focus:outline-none cursor-pointer">
+<option value="all">Tier: All Classifications</option>
+<option value="tier-1">Tier 1 Global Strategic</option>
+<option value="tier-2">Tier 2 Regional Major</option>
+<option value="broker">Strategic 3PL Broker</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+<!-- Filter: Credit Standing -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 bg-surface-variant rounded-lg font-label-medium text-label-medium text-on-surface appearance-none focus:outline-none cursor-pointer">
+<option value="all">Credit: All Standings</option>
+<option value="a1">Tier A1 (Prime Underwritten)</option>
+<option value="a2">Tier A2 (Secured / Factorable)</option>
+<option value="watchlist">Watchlist &amp; Review</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+<!-- Filter: Volume -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 bg-surface-variant rounded-lg font-label-medium text-label-medium text-on-surface appearance-none focus:outline-none cursor-pointer">
+<option value="all">Volume: Any Booking Rate</option>
+<option value="high">&gt; $2M / month</option>
+<option value="med">$500K - $2M / month</option>
+<option value="low">&lt; $500K / month</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Active Filter Counter & Clear -->
+<div class="flex items-center gap-spacing-xs shrink-0 self-end xl:self-auto">
+<span class="font-body-small text-body-small text-on-surface-variant">Showing <span class="font-semibold text-on-surface">6 of 142</span> Institutional Shippers</span>
+<button class="p-2 text-on-surface-variant hover:text-primary rounded-lg hover:bg-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">filter_list_off</span>
+</button>
+</div>
+</div>
+<!-- Workspace Grid: Customer Master Table (Left/Center) + Live Feed & Analytics (Right) -->
+<div class="grid grid-cols-1 2xl:grid-cols-4 gap-spacing-xl items-start">
+<!-- Table Container (Spans 3 cols on 2xl) -->
+<div class="2xl:col-span-3 bg-surface rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header & Actions -->
+<div class="px-spacing-lg py-spacing-md flex items-center justify-between bg-surface">
+<div class="flex items-center gap-spacing-sm">
+<span class="font-title-small text-title-small text-on-secondary-container">Active Shipper Portfolio</span>
+<span class="px-2.5 py-0.5 rounded-full font-label-small text-label-small bg-primary-container text-on-primary-container font-semibold">Live Real-Time</span>
+</div>
+<div class="flex items-center gap-spacing-xs">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">view_column</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- High Density Modern Enterprise Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-medium text-body-medium">
+<thead class="bg-surface-variant font-label-small text-label-small text-on-surface-variant uppercase tracking-wider select-none">
+<tr>
+<th class="py-spacing-sm pl-spacing-lg pr-spacing-xs" scope="col">Account / Company</th>
+<th class="py-spacing-sm px-spacing-sm" scope="col">Tier</th>
+<th class="py-spacing-sm px-spacing-sm" scope="col">Primary Trade Lanes</th>
+<th class="py-spacing-sm px-spacing-sm" scope="col">Quotes &amp; Dispatches</th>
+<th class="py-spacing-sm px-spacing-sm min-w-[170px]" scope="col">Credit Utilization</th>
+<th class="py-spacing-sm px-spacing-sm" scope="col">Payment Terms</th>
+<th class="py-spacing-sm px-spacing-sm" scope="col">Commercial Lead</th>
+<th class="py-spacing-sm px-spacing-sm" scope="col">Status</th>
+<th class="py-spacing-sm pr-spacing-lg pl-spacing-xs text-right" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Row 1: Acme Global Logistics -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="py-spacing-md pl-spacing-lg pr-spacing-xs">
+<div class="flex items-center gap-spacing-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container font-bold font-label-large text-label-large flex items-center justify-center shrink-0">
+                    AG
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-large text-label-large text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Acme Global Logistics</span>
+<span class="font-body-small text-body-small text-on-surface-variant truncate">ID: ACT-88402 · FMC Licensed</span>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<span class="px-2 py-0.5 rounded-full font-label-small text-label-small bg-primary-container text-on-primary-container font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">grade</span> Tier 1 Global
+                </span>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">LAX → CHI (Intermodal)</span>
+<span class="font-body-small text-body-small text-on-surface-variant">SEA → KAN (Dedicated)</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-variant font-label-small text-label-small font-semibold">4 Quotes</span>
+<span class="text-on-surface-variant">·</span>
+<span class="font-label-small text-label-small font-semibold text-primary">12 Active Dispatches</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-small text-label-small">
+<span class="font-semibold text-on-secondary-container">$380K</span>
+<span class="text-on-surface-variant">of $500K (76%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 76%"></div>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Net-30 Automated</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Direct ACH Verified</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-secondary-container flex items-center justify-center font-label-small text-label-small font-semibold">EV</span>
+<span class="font-label-medium text-label-medium text-on-surface">Eleanor Vance</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-small text-label-small bg-primary-container text-primary font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span> Active · Verified
+                </span>
+</td>
+<td class="py-spacing-md pr-spacing-lg pl-spacing-xs text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-variant hover:bg-primary hover:text-on-primary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    Portal 360
+                  </button>
+<button class="px-2 py-1 rounded hover:bg-surface-variant text-tertiary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    + Quote
+                  </button>
+<button class="p-1 rounded hover:bg-surface-variant text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Horizon Supply Corp -->
+<tr class="hover:bg-surface-bright transition-colors group bg-surface-variant/30">
+<td class="py-spacing-md pl-spacing-lg pr-spacing-xs">
+<div class="flex items-center gap-spacing-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-on-secondary-container font-bold font-label-large text-label-large flex items-center justify-center shrink-0">
+                    HS
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-large text-label-large text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Horizon Supply Corp</span>
+<span class="font-body-small text-body-small text-on-surface-variant truncate">ID: ACT-90114 · Automotive Tier-1</span>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<span class="px-2 py-0.5 rounded-full font-label-small text-label-small bg-primary-container text-on-primary-container font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">grade</span> Tier 1 Global
+                </span>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">NLRTM → NYC (Ocean)</span>
+<span class="font-body-small text-body-small text-on-surface-variant">HAM → CHS (Breakbulk)</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-variant font-label-small text-label-small font-semibold">9 Quotes</span>
+<span class="text-on-surface-variant">·</span>
+<span class="font-label-small text-label-small font-semibold text-primary">28 Active Dispatches</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-small text-label-small">
+<span class="font-semibold text-on-secondary-container">$1.42M</span>
+<span class="text-on-surface-variant">of $2.0M (71%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 71%"></div>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Net-60 Standby LC</span>
+<span class="font-body-small text-body-small text-on-surface-variant">JPMorgan Escrow</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-small text-label-small font-semibold">MV</span>
+<span class="font-label-medium text-label-medium text-on-surface">Marcus Vance</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-small text-label-small bg-primary-container text-primary font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span> Active · Verified
+                </span>
+</td>
+<td class="py-spacing-md pr-spacing-lg pl-spacing-xs text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-variant hover:bg-primary hover:text-on-primary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    Portal 360
+                  </button>
+<button class="px-2 py-1 rounded hover:bg-surface-variant text-tertiary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    + Quote
+                  </button>
+<button class="p-1 rounded hover:bg-surface-variant text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Nexus Tech Logistics -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="py-spacing-md pl-spacing-lg pr-spacing-xs">
+<div class="flex items-center gap-spacing-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-on-secondary-container font-bold font-label-large text-label-large flex items-center justify-center shrink-0">
+                    NT
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-large text-label-large text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Nexus Tech Logistics</span>
+<span class="font-body-small text-body-small text-on-surface-variant truncate">ID: ACT-63200 · High-Value Electronics</span>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<span class="px-2 py-0.5 rounded-full font-label-small text-label-small bg-surface-variant text-on-surface font-semibold inline-flex items-center gap-1">
+                  Tier 2 Regional
+                </span>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">TPE → DFW (Air Express)</span>
+<span class="font-body-small text-body-small text-on-surface-variant">HKG → ORD (Air Charter)</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-variant font-label-small text-label-small font-semibold">2 Quotes</span>
+<span class="text-on-surface-variant">·</span>
+<span class="font-label-small text-label-small font-semibold text-primary">6 Active Dispatches</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-small text-label-small">
+<span class="font-semibold text-on-secondary-container">$920K</span>
+<span class="text-on-surface-variant">of $1.0M (92%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-1.5 rounded-full" style="width: 92%"></div>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Net-15 Wire Transfer</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Accelerated Early Pmt</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-secondary-container flex items-center justify-center font-label-small text-label-small font-semibold">SK</span>
+<span class="font-label-medium text-label-medium text-on-surface">Sarah Koenig</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-small text-label-small bg-error-container text-on-tertiary-container font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-container"></span> Limit Review Needed
+                </span>
+</td>
+<td class="py-spacing-md pr-spacing-lg pl-spacing-xs text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-variant hover:bg-primary hover:text-on-primary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    Portal 360
+                  </button>
+<button class="px-2 py-1 rounded hover:bg-surface-variant text-tertiary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    + Quote
+                  </button>
+<button class="p-1 rounded hover:bg-surface-variant text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: TransPacific Freight -->
+<tr class="hover:bg-surface-bright transition-colors group bg-surface-variant/30">
+<td class="py-spacing-md pl-spacing-lg pr-spacing-xs">
+<div class="flex items-center gap-spacing-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-primary font-bold font-label-large text-label-large flex items-center justify-center shrink-0">
+                    TP
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-large text-label-large text-on-surface font-semibold truncate group-hover:text-primary transition-colors">TransPacific Freight</span>
+<span class="font-body-small text-body-small text-on-surface-variant truncate">ID: ACT-51109 · Master 3PL Broker</span>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<span class="px-2 py-0.5 rounded-full font-label-small text-label-small bg-secondary-fixed text-on-secondary-container font-semibold inline-flex items-center gap-1">
+                  Strategic Broker
+                </span>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Asia-Europe Intra Lines</span>
+<span class="font-body-small text-body-small text-on-surface-variant">SIN → RTM (Full Charter)</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-variant font-label-small text-label-small font-semibold">11 Quotes</span>
+<span class="text-on-surface-variant">·</span>
+<span class="font-label-small text-label-small font-semibold text-primary">45 Active Dispatches</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-small text-label-small">
+<span class="font-semibold text-on-secondary-container">$2.85M</span>
+<span class="text-on-surface-variant">of $5.0M (57%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 57%"></div>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Net-45 Consolidated</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Bi-Weekly Master Billing</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-small text-label-small font-semibold">MV</span>
+<span class="font-label-medium text-label-medium text-on-surface">Marcus Vance</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-small text-label-small bg-primary-container text-primary font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span> Active · Verified
+                </span>
+</td>
+<td class="py-spacing-md pr-spacing-lg pl-spacing-xs text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-variant hover:bg-primary hover:text-on-primary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    Portal 360
+                  </button>
+<button class="px-2 py-1 rounded hover:bg-surface-variant text-tertiary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    + Quote
+                  </button>
+<button class="p-1 rounded hover:bg-surface-variant text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Midwest Distribution Co -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="py-spacing-md pl-spacing-lg pr-spacing-xs">
+<div class="flex items-center gap-spacing-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-on-secondary-container font-bold font-label-large text-label-large flex items-center justify-center shrink-0">
+                    MD
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-large text-label-large text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Midwest Distribution Co</span>
+<span class="font-body-small text-body-small text-on-surface-variant truncate">ID: ACT-44910 · FMCG &amp; Retail</span>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<span class="px-2 py-0.5 rounded-full font-label-small text-label-small bg-surface-variant text-on-surface font-semibold inline-flex items-center gap-1">
+                  Tier 2 Regional
+                </span>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">CHI → ATL (Full Truckload)</span>
+<span class="font-body-small text-body-small text-on-surface-variant">IND → MEM (Reefer Dedicated)</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-variant font-label-small text-label-small font-semibold">1 Quote</span>
+<span class="text-on-surface-variant">·</span>
+<span class="font-label-small text-label-small font-semibold text-primary">19 Active Dispatches</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-small text-label-small">
+<span class="font-semibold text-on-secondary-container">$610K</span>
+<span class="text-on-surface-variant">of $800K (76%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 76%"></div>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Net-30 Automated</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Card/ACH Hybrid</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-secondary-container flex items-center justify-center font-label-small text-label-small font-semibold">EV</span>
+<span class="font-label-medium text-label-medium text-on-surface">Eleanor Vance</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-small text-label-small bg-primary-container text-primary font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span> Active · Verified
+                </span>
+</td>
+<td class="py-spacing-md pr-spacing-lg pl-spacing-xs text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-variant hover:bg-primary hover:text-on-primary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    Portal 360
+                  </button>
+<button class="px-2 py-1 rounded hover:bg-surface-variant text-tertiary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    + Quote
+                  </button>
+<button class="p-1 rounded hover:bg-surface-variant text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Nordic Cold Chain AS -->
+<tr class="hover:bg-surface-bright transition-colors group bg-surface-variant/30">
+<td class="py-spacing-md pl-spacing-lg pr-spacing-xs">
+<div class="flex items-center gap-spacing-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-secondary-container font-bold font-label-large text-label-large flex items-center justify-center shrink-0">
+                    NC
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-large text-label-large text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Nordic Cold Chain AS</span>
+<span class="font-body-small text-body-small text-on-surface-variant truncate">ID: ACT-11942 · Pharma &amp; Bio</span>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<span class="px-2 py-0.5 rounded-full font-label-small text-label-small bg-primary-container text-on-primary-container font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">grade</span> Tier 1 Global
+                </span>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">OSL → FRA (Reefer Air)</span>
+<span class="font-body-small text-body-small text-on-surface-variant">CPH → BOS (Clinical Express)</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-variant font-label-small text-label-small font-semibold">5 Quotes</span>
+<span class="text-on-surface-variant">·</span>
+<span class="font-label-small text-label-small font-semibold text-primary">8 Active Dispatches</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-small text-label-small">
+<span class="font-semibold text-on-secondary-container">$1.82M</span>
+<span class="text-on-surface-variant">of $3.5M (52%)</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 52%"></div>
+</div>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Net-60 Letters of Credit</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Nordea Sovereign Guaran.</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-small text-label-small font-semibold">SK</span>
+<span class="font-label-medium text-label-medium text-on-surface">Sarah Koenig</span>
+</div>
+</td>
+<td class="py-spacing-md px-spacing-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-small text-label-small bg-primary-container text-primary font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span> Active · Verified
+                </span>
+</td>
+<td class="py-spacing-md pr-spacing-lg pl-spacing-xs text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-variant hover:bg-primary hover:text-on-primary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    Portal 360
+                  </button>
+<button class="px-2 py-1 rounded hover:bg-surface-variant text-tertiary font-label-small text-label-small font-semibold transition-colors" type="button">
+                    + Quote
+                  </button>
+<button class="p-1 rounded hover:bg-surface-variant text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer Bar -->
+<div class="px-spacing-lg py-spacing-sm bg-surface-variant/40 flex items-center justify-between">
+<div class="flex items-center gap-spacing-xs text-on-surface-variant font-body-small text-body-small">
+<span>Displaying rows 1–6 of 142 records</span>
+<span class="mx-1">•</span>
+<span class="text-primary font-semibold cursor-pointer hover:underline">Batch Credit Re-evaluation</span>
+</div>
+<div class="flex items-center gap-spacing-xs">
+<button class="px-3 py-1 bg-surface rounded text-on-surface-variant font-label-small text-label-small disabled:opacity-40" disabled="" type="button">Previous</button>
+<button class="px-3 py-1 bg-primary text-on-primary rounded font-label-small text-label-small font-bold" type="button">1</button>
+<button class="px-3 py-1 bg-surface hover:bg-surface-variant text-on-surface rounded font-label-small text-label-small" type="button">2</button>
+<button class="px-3 py-1 bg-surface hover:bg-surface-variant text-on-surface rounded font-label-small text-label-small" type="button">3</button>
+<span class="text-on-surface-variant font-label-small text-label-small px-1">...</span>
+<button class="px-3 py-1 bg-surface hover:bg-surface-variant text-on-surface rounded font-label-small text-label-small" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Side Panel: Live Feed & Shipper Health Diagnostics (Spans 1 col on 2xl) -->
+<div class="2xl:col-span-1 flex flex-col gap-spacing-lg">
+<!-- Activity Feed Widget -->
+<div class="bg-surface rounded-xl p-spacing-lg shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-spacing-md">
+<div class="flex items-center gap-spacing-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">notifications_active</span>
+<h2 class="font-title-small text-title-small text-on-secondary-container">Top Account Activity</h2>
+</div>
+<span class="font-label-small text-label-small text-primary cursor-pointer hover:underline">View All</span>
+</div>
+<div class="space-y-spacing-md">
+<!-- Item 1: Rate Renegotiation -->
+<div class="p-spacing-sm rounded-lg bg-surface-variant flex flex-col gap-1.5 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-small text-label-small px-1.5 py-0.5 rounded bg-error-container text-on-tertiary-container font-bold">Urgent Rate Tender</span>
+<span class="font-label-small text-label-small text-on-surface-variant">14m ago</span>
+</div>
+<div class="font-label-large text-label-large text-on-surface font-semibold">Nexus Tech Logistics</div>
+<p class="font-body-small text-body-small text-on-surface-variant">
+              Automated trigger: Account has hit 92% credit threshold ($920k/$1.0M). Master credit line review requested for Q3 booking run.
+            </p>
+<div class="mt-1 flex items-center justify-between">
+<span class="font-label-small text-label-small text-tertiary font-bold">Assigned: Sarah Koenig</span>
+<button class="font-label-small text-label-small text-primary font-bold hover:underline" type="button">Review Terms →</button>
+</div>
+</div>
+<!-- Item 2: Quote Request -->
+<div class="p-spacing-sm rounded-lg bg-surface-variant flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-small text-label-small px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-bold">New Quote Request</span>
+<span class="font-label-small text-label-small text-on-surface-variant">42m ago</span>
+</div>
+<div class="font-label-large text-label-large text-on-surface font-semibold">Acme Global Logistics</div>
+<p class="font-body-small text-body-small text-on-surface-variant">
+              Inquiry #DF-8819 for 40x Reefer high-cube units LAX → CHI intermodal corridor. Target departure Sep 12.
+            </p>
+<div class="mt-1 flex items-center justify-between">
+<span class="font-label-small text-label-small text-on-surface-variant">Estimated Value: $148,000</span>
+<button class="font-label-small text-label-small text-primary font-bold hover:underline" type="button">Generate Instant Quote</button>
+</div>
+</div>
+<!-- Item 3: Payment Settled -->
+<div class="p-spacing-sm rounded-lg bg-surface-variant flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-small text-label-small px-1.5 py-0.5 rounded bg-primary-container text-primary font-bold">ACH Remittance</span>
+<span class="font-label-small text-label-small text-on-surface-variant">2h ago</span>
+</div>
+<div class="font-label-large text-label-large text-on-surface font-semibold">TransPacific Freight</div>
+<p class="font-body-small text-body-small text-on-surface-variant">
+              Wire received for $485,200.00 settling invoices INV-2024-0994 through 1008. Credit availability automatically replenished to $2.15M.
+            </p>
+</div>
+</div>
+</div>
+<!-- Quick Executive Insight Card -->
+<div class="bg-surface rounded-xl p-spacing-lg shadow-sm flex flex-col gap-spacing-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-small text-label-small text-on-surface-variant uppercase tracking-wider font-semibold">Lane Volume Distribution</span>
+<span class="font-label-small text-label-small text-primary font-semibold">Q3 Projected</span>
+</div>
+<!-- SVG Spark/Distribution chart -->
+<div class="mt-spacing-xs">
+<svg class="w-full h-16 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 300 64">
+<path d="M0,50 Q40,40 80,48 T160,25 T240,15 T300,8 L300,64 L0,64 Z" fill="currentColor" fill-opacity="0.1"></path>
+<path d="M0,50 Q40,40 80,48 T160,25 T240,15 T300,8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-spacing-sm pt-spacing-xs">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small text-on-surface-variant">Intermodal Domestic</span>
+<span class="font-title-small text-title-small text-on-secondary-container">58.4%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-small text-body-small text-on-surface-variant">Ocean &amp; Air Charter</span>
+<span class="font-title-small text-title-small text-on-secondary-container">41.6%</span>
+</div>
+</div>
+</div>
+<!-- Key Commercial Lead Roster -->
+<div class="bg-surface rounded-xl p-spacing-lg shadow-sm flex flex-col gap-spacing-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-small text-label-small text-on-surface-variant uppercase tracking-wider font-semibold">Lead Operations Dispatchers</span>
+<span class="font-label-small text-label-small text-primary font-semibold">Active Staff</span>
+</div>
+<div class="divide-y-0 space-y-2 mt-1">
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-small text-label-small font-bold">MV</div>
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Marcus Vance</span>
+<span class="font-body-small text-body-small text-on-surface-variant">54 Accounts · $24.8M Booked</span>
+</div>
+</div>
+<span class="h-2 w-2 rounded-full bg-primary" title="Online"></span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-secondary-container flex items-center justify-center font-label-small text-label-small font-bold">EV</div>
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Eleanor Vance</span>
+<span class="font-body-small text-body-small text-on-surface-variant">48 Accounts · $21.2M Booked</span>
+</div>
+</div>
+<span class="h-2 w-2 rounded-full bg-primary" title="Online"></span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-secondary-container flex items-center justify-center font-label-small text-label-small font-semibold">SK</div>
+<div class="flex flex-col">
+<span class="font-label-medium text-label-medium text-on-surface">Sarah Koenig</span>
+<span class="font-body-small text-body-small text-on-surface-variant">40 Accounts · $16.9M Booked</span>
+</div>
+</div>
+<span class="h-2 w-2 rounded-full bg-primary" title="Online"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Minimal interactive filter/search simulation for the Customer Hub
+  const searchInput = document.getElementById('shipperSearchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const rows = document.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  }
+</script></main></div></body></html>
