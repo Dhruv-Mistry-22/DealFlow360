@@ -6,3 +6,4 @@
 - Backend Commit 6: Implement Quotes service
 - Backend Commit 7: Add Risk Engine logic
 - Backend Commit 8: Configure Approval workflows
+- Backend Commit 9: Add copilot service
