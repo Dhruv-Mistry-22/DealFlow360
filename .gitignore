@@ -9,6 +9,9 @@ dist-ssr/
 *.local
 push-ui-v1.bat
 
+# Local UI-UX working directory (untracked in Git, kept locally)
+UI-UX/
+
 # Logs
 logs/
 *.log

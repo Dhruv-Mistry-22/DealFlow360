@@ -9,20 +9,20 @@ An intelligent, self-governing B2B sales operations platform that enforces prici
 - **Architecture**: Glass Box Logic + Stateful AI Co-Pilot + SaaS-Grade UX
 
 ## How to Run
-Run via `run.bat` in the project root (`E:\odoo-hack\UI-UX\run.bat`), or manually:
+Run via `run.bat` or `start-frontend.bat` in the project root (`E:\odoo-hack\run.bat`), or manually:
 ```cmd
+cd frontend
 npm.cmd run dev
 ```
 Access in browser: `http://localhost:5173`
 
 ## Directory Structure
 ```
-E:\odoo-hack\UI-UX/
+E:\odoo-hack\frontend/
 ├── index.html                   # HTML shell with Google Fonts & meta
 ├── package.json                 # React, Vite, Tailwind, Lucide dependencies
 ├── tailwind.config.js           # Brand orange & dark glassmorphic tokens
 ├── vite.config.ts               # Vite configuration
-├── run.bat                      # 1-click Windows runner
 ├── src/
 │   ├── main.tsx                 # App mount
 │   ├── App.tsx                  # Tab router & glass box overlay orchestrator

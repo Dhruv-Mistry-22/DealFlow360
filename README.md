@@ -39,13 +39,16 @@ Double click **`run.bat`** in this directory, or run from terminal:
 
 ### Manual Launch
 ```cmd
-# 1. Install dependencies
+# 1. Navigate to frontend
+cd frontend
+
+# 2. Install dependencies
 npm.cmd install
 
-# 2. Start Vite dev server
+# 3. Start Vite dev server
 npm.cmd run dev
 
-# 3. Production build verification
+# 4. Production build verification
 npm.cmd run build
 ```
 Once started, navigate to **`http://localhost:5173`** in your browser.
