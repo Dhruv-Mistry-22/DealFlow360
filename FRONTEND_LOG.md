@@ -1,0 +1,1 @@
+- Frontend Commit 1: Init Next.js frontend
