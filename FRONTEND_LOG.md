@@ -11,3 +11,4 @@
 - Frontend Commit 11: Add role-based navigation
 - Frontend Commit 12: Fix hydration mismatch errors
 - Frontend Commit 13: Refactor state management
+- Frontend Commit 14: Finalize frontend UX
