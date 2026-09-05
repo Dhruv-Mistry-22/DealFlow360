@@ -6,3 +6,4 @@
 - Commit 6: Create base database models
 - Commit 7: Add User and Auth models
 - Commit 8: Implement JWT authentication
+- Commit 9: Add Product and Catalog schemas
