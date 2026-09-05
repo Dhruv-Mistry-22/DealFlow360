@@ -7,3 +7,4 @@
 - Commit 7: Add User and Auth models
 - Commit 8: Implement JWT authentication
 - Commit 9: Add Product and Catalog schemas
+- Commit 10: Create Quote and QuoteLine models
