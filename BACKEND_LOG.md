@@ -8,3 +8,4 @@
 - Backend Commit 8: Configure Approval workflows
 - Backend Commit 9: Add copilot service
 - Backend Commit 10: Add audit logging
+- Backend Commit 11: Refactor pricing math
