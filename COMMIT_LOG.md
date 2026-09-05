@@ -21,3 +21,4 @@
 - Commit 21: Connect Quote Builder to backend API
 - Commit 22: Build Approvals Queue page
 - Commit 23: Implement approve/reject backend actions
+- Commit 24: Add role-based UI rendering
