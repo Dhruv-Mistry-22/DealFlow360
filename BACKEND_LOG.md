@@ -1,1 +1,2 @@
 - Backend Commit 1: Init backend structure
+- Backend Commit 2: Add database models
