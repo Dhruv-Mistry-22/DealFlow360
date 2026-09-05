@@ -3,3 +3,4 @@
 - Frontend Commit 3: Create base layout and styles
 - Frontend Commit 4: Add Login page components
 - Frontend Commit 5: Build Dashboard charts
+- Frontend Commit 6: Implement Quote Builder UI
