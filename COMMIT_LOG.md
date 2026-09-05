@@ -15,3 +15,4 @@
 - Commit 15: Add seed data script for testing
 - Commit 16: Build frontend Login page UI
 - Commit 17: Create Dashboard UI layout
+- Commit 18: Implement Quote Builder component
