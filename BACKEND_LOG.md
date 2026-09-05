@@ -2,3 +2,4 @@
 - Backend Commit 2: Add database models
 - Backend Commit 3: Configure SQLAlchemy
 - Backend Commit 4: Add User authentication
+- Backend Commit 5: Create Catalog API endpoints
