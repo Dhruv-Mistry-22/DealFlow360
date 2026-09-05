@@ -9,3 +9,4 @@
 - Frontend Commit 9: Add Approvals Queue screen
 - Frontend Commit 10: Implement API client utility
 - Frontend Commit 11: Add role-based navigation
+- Frontend Commit 12: Fix hydration mismatch errors
