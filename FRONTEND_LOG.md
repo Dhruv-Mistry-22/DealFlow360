@@ -7,3 +7,4 @@
 - Frontend Commit 7: Add product search dropdown
 - Frontend Commit 8: Create cart and margin calculator
 - Frontend Commit 9: Add Approvals Queue screen
+- Frontend Commit 10: Implement API client utility
