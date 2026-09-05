@@ -23,3 +23,4 @@
 - Commit 23: Implement approve/reject backend actions
 - Commit 24: Add role-based UI rendering
 - Commit 25: Integrate upsell recommendation logic
+- Commit 26: Fix hydration errors in Next.js layout
