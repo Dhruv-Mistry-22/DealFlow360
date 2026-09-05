@@ -9,3 +9,4 @@
 - Commit 9: Add Product and Catalog schemas
 - Commit 10: Create Quote and QuoteLine models
 - Commit 11: Implement core pricing engine logic
+- Commit 12: Add risk scoring logic based on discounts
