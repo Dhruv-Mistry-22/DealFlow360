@@ -1,1 +1,2 @@
 - Frontend Commit 1: Init Next.js frontend
+- Frontend Commit 2: Install TailwindCSS and configure
