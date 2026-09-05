@@ -17,3 +17,4 @@
 - Commit 17: Create Dashboard UI layout
 - Commit 18: Implement Quote Builder component
 - Commit 19: Add product search and cart logic
+- Commit 20: Integrate margin calculation in frontend
