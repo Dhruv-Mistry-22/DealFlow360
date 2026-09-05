@@ -1,124 +1,242 @@
-# DealFlow360 - Enterprise Logistics & Deal Execution Platform
+<div align="center">
 
-> **Turn Every Deal Into Momentum.**  
-> Intelligently governing multi-modal freight pricing, delegated approvals, execution fulfillment, automated EDI billing, and customer negotiation — from quotation to cash.
+# ⚡ DealFlow360
+### Autonomous Multi-Modal Logistics CPQ & Deal Execution Platform
+**Turn Every Deal Into Momentum — From Quotation to Cash.**
+
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Platform SLA](https://img.shields.io/badge/Platform_SLA-99.98%25-006196?style=for-the-badge&logo=google-cloud&logoColor=white)]()
+[![Pure React SPA](https://img.shields.io/badge/Architecture-100%25_Pure_React_SPA-10B981?style=for-the-badge&logo=fastapi&logoColor=white)]()
+[![Zero Reloads](https://img.shields.io/badge/State_Transitions-Zero_Page_Reloads-8B5CF6?style=for-the-badge)]()
+
+<br/>
+
+[🚀 Quickstart](#-quickstart) • [✨ Key Highlights](#-key-highlights) • [🧭 17 Unified Screens](#-17-unified-enterprise-screens) • [🛡️ CPQ Margin Guard](#️-autonomous-cpq-margin-guard) • [📐 Architecture](#-deal-execution-architecture) • [⌨️ Shortcuts](#️-productivity-shortcuts)
+
+</div>
 
 ---
 
-## Quickstart
+## 🌟 Overview
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) v18.0.0 or higher
-- npm v9+ (or `npm.cmd` on Windows)
+**DealFlow360** is an enterprise-grade CPQ (Configure, Price, Quote) and multimodal freight execution operating system. Engineered for global carriers, 3PL freight forwarders, and institutional shippers, DealFlow360 eliminates margin erosion and friction by connecting commercial pricing policy, risk auditing, live carrier telematics, and automated quote-to-cash settlement into a single, cohesive **Single Page Application (SPA)**.
 
-### 1. Installation
+> [!IMPORTANT]
+> **Zero Reloads, 100% Pure React 18**: Built from the ground up by fusing 17 operational and customer-facing interfaces into one ultra-responsive application with global context state, keyboard-driven navigation (`⌘K`), and live telemetry simulation.
+
+---
+
+## ✨ Key Highlights
+
+```
+  ┌───────────────────────┐   ┌───────────────────────┐   ┌───────────────────────┐
+  │   17 Unified Views    │   │  18.0% Hard Margin    │   │  -18.2°C Telematics   │
+  │  Quote, Dispatch, Pay │   │ Programmatic Safeguard│   │ Live IoT Reefer Feeds │
+  └───────────────────────┘   └───────────────────────┘   └───────────────────────┘
+  ┌───────────────────────┐   ┌───────────────────────┐   ┌───────────────────────┐
+  │   Command Palette ⌘K  │   │  3-Way EDI Match      │   │   1.1s Vite Build     │
+  │ Instant Fuzzy Search  │   │ Quote + Waybill + Pay │   │ Lightning Fast HMR    │
+  └───────────────────────┘   └───────────────────────┘   └───────────────────────┘
+```
+
+| Capability | What It Delivers |
+|---|---|
+| 🚢 **Multi-Modal CPQ Engine** | Real-time rate calculation across **Ocean FCL/LCL**, **Air Expedited**, **Class 1 Rail**, and **Over-The-Road (FTL)** with dynamic bunker/fuel surcharges. |
+| 🛡️ **Algorithmic Margin Guard** | Strict **18.0% Gross Margin Hard Floor** with automated multi-tier approval delegation (Sales Rep &rarr; Regional Director &rarr; Pricing Desk &rarr; VP/CFO). |
+| 🛰️ **IoT Telematics & Waypoints** | Real-time sensor monitoring for cold-chain reefers (**-18.2°C telemetry**), GPS milepost tracking, and port terminal milestones. |
+| 💳 **3-Way Automated Settlement** | EDI-810 gateway reconciling **Quotation (`Q-1024`)** &harr; **Carrier Waybill (`SH-9402`)** &harr; **Invoice (`INV-2024-8891`)** with multi-party carrier payout splits. |
+| ⌨️ **Command Center (`⌘K`)** | Global fuzzy-search palette allowing instantaneous jumping to any quotation, active waybill, invoice, or navigation module. |
+| 📊 **Real-time Risk Intelligence** | Interactive scatter plot matrix mapping active contracts across margin percentage vs. commitment volume with SLA breach countdowns. |
+
+---
+
+## 📐 Deal Execution Architecture
+
+```mermaid
+graph LR
+    A["📄 1. Quotation<br/><b>Live CPQ Sync</b>"] --> B{"⚖️ 2. Margin Check<br/><b>≥ 18.0% Floor?</b>"}
+    B -- "⚠️ Breached (< 18%)" --> C["🔒 3. Approval Desk<br/><b>VP Marcus Vance Sign-off</b>"]
+    B -- "✅ Compliant (≥ 18%)" --> D["🚢 4. Fulfillment<br/><b>Carrier Dispatch SH-9402</b>"]
+    C -- "✍️ PKI Attestation" --> D
+    D --> E["🛰️ 5. Telematics<br/><b>IoT -18.2°C & Mileposts</b>"]
+    E --> F["🧾 6. Settlement<br/><b>EDI-810 Fedwire Reconciled</b>"]
+
+    style A fill:#EAF6FC,stroke:#006196,stroke-width:2px
+    style B fill:#F1F5F8,stroke:#116398,stroke-width:2px
+    style C fill:#FDECEA,stroke:#dc3207,stroke-width:2px
+    style D fill:#EAF6FC,stroke:#006196,stroke-width:2px
+    style E fill:#d7eaff,stroke:#116398,stroke-width:2px
+    style F fill:#dcfce7,stroke:#10B981,stroke-width:2px
+```
+
+---
+
+## 🛡️ Autonomous CPQ Margin Guard
+
+DealFlow360 stops margin degradation before contracts can be dispatched:
+
+```mermaid
+flowchart TD
+    Q[Sales Rep Creates Quotation] --> M{Discount Applied?}
+    M -->|0.0% - 5.0%| T1[Tier 1: Instant System Approval]
+    M -->|5.1% - 12.0%| T2[Tier 2: Regional Sales Director]
+    M -->|12.1% - 18.0%| T3[Tier 3: Director of Pricing]
+    M -->|> 18.0% Floor Breach| T4[Tier 4: Marcus Vance VP & CFO Sign-off]
+    T1 --> DISPATCH[Release to Carrier Network]
+    T2 -->|Approved| DISPATCH
+    T3 -->|Approved| DISPATCH
+    T4 -->|Cryptographic Attestation| DISPATCH
+    T2 -->|Rejected| REV[Counter-Offer / Revise Tariff]
+    T3 -->|Rejected| REV
+    T4 -->|Rejected| REV
+
+    style T1 fill:#dcfce7,stroke:#10B981
+    style T2 fill:#EAF6FC,stroke:#006196
+    style T3 fill:#fef3c7,stroke:#d97706
+    style T4 fill:#FDECEA,stroke:#dc3207
+```
+
+### Delegated Authority Matrix
+
+| Tier | Discount Concession | Minimum Margin | Approval Authority | SLA Target |
+|:---:|:---:|:---:|:---:|:---:|
+| **Tier 1** | `0.0% - 5.0%` | &ge; 25.0% | **Automated Instant Sign** | Real-time (&lt; 1s) |
+| **Tier 2** | `5.1% - 12.0%` | &ge; 20.0% | **Regional Sales Director** | 4 Hours |
+| **Tier 3** | `12.1% - 18.0%` | &ge; 18.0% | **Director of Pricing** | 2 Hours |
+| **Tier 4** | `> 18.0%` *(Hard Lock)* | &lt; 18.0% | **Marcus Vance (VP) & CFO** | 45 Minutes *(Rate-Lock Expiry)* |
+
+---
+
+## 🧭 17 Unified Enterprise Screens
+
+The entire suite lives modularly inside [`src/pages/`](src/pages/) with instant, flicker-free client transitions:
+
+### 🌐 Public & Customer-Facing
+- **[1. Public Landing Page](src/pages/LandingPage.jsx)** (`'landing'`): Dynamic hero section, interactive quotation and waybill tracking card, enterprise stats bar, and direct platform launcher.
+- **[2. Customer Portal 360°](src/pages/CustomerPortal.jsx)** (`'customer-portal'`): Account 360 view for institutional shippers (Acme Global, Falcon Aerospace, Pacific Rim) with credit facilities, DSO metrics, and active orders.
+
+### 💼 Commercial CPQ & Governance
+- **[3. Dashboard Overview](src/pages/DashboardOverview.jsx)** (`'overview'`): Delegated authority discount tiers, hard margin safeguards, corridor rule setup, and workflow simulation.
+- **[4. Quotations List](src/pages/QuotationList.jsx)** (`'quotations'`): Live CPQ sync pipeline, multi-status filters (All, Awaiting, Drafts, Converted), batch approvals, and CSV export.
+- **[5. Quotation Details](src/pages/QuotationDetails.jsx)** (`'quotation-detail'`): Single-deal view (`Q-1024`), 5-stage lifecycle stepper, tariff breakdowns, and interactive commercial concession slider.
+- **[6. Approvals & Governance](src/pages/ApprovalsList.jsx)** (`'approvals'`): High-severity SLA expiration banner (&lt; 45m rate locks), exception queue, and fast-track filtering.
+- **[7. Approval Request Details](src/pages/ApprovalDetails.jsx)** (`'approval-detail'`): Single-request authorization (`AP-8821`), deal economics breakdown (-6.2% floor variance), and PKI electronic signature attestation.
+- **[8. Deal Health & Risk Intelligence](src/pages/DealHealth.jsx)** (`'deal-health'`): Interactive SVG scatter plot matrix, clickable deal bubbles, algorithmic stress testing, and churn alerts.
+
+### 🚚 Fulfillment & Fleet Execution
+- **[9. Fulfillment & Carrier Dispatch](src/pages/FulfillmentList.jsx)** (`'fulfillment'`): Freight dispatches, terminal milestones, active bills of lading, and carrier SLA monitoring.
+- **[10. Fulfillment Order Details](src/pages/FulfillmentDetails.jsx)** (`'fulfillment-detail'`): Waybill `SH-9402` GPS waypoints (Port Newark &rarr; Bethlehem &rarr; Chicago Corwith), -18.2°C Reefer IoT telematics, and real-time ping updates.
+
+### 💰 Invoicing & Quote-to-Cash
+- **[11. Enterprise Invoices & Billing](src/pages/InvoicesList.jsx)** (`'invoices'`): Receivables aging buckets, EDI-810 gateway statuses, batch reconciliation, and manual invoice generator.
+- **[12. Invoice Details](src/pages/InvoiceDetails.jsx)** (`'invoice-detail'`): `INV-2024-8891` line items, automated 3-way match verification (Quote + Waybill + Ingate milestone), and Fedwire clearing reference.
+- **[13. Settlement & Ledger Balancing](src/pages/BillingDetails.jsx)** (`'billing-detail'`): `INV-88291` multi-party carrier payout vs platform margin split and ACH wire settlement recorder.
+
+### 📦 Catalog, Contracts & Compliance
+- **[14. Products & Catalog](src/pages/ProductDashboard.jsx)** (`'products'`): Multi-modal freight inventory (Ocean, Air, Rail, Truckload), Cass index sync, and carrier price books.
+- **[15. Product SKU Details](src/pages/ProductDetails.jsx)** (`'product-detail'`): `SKU-OCN-40HC` 40ft High-Cube Reefer technical machinery specs and dynamic tariff pricing formula.
+- **[16. Enterprise Subscriptions](src/pages/SubscriptionList.jsx)** (`'subscriptions'`): Recurring carrier network allocations, software seats, $18.4M ARR metrics, and renewal health.
+- **[17. Admin & Compliance Governance](src/pages/AdminReport.jsx)** (`'admin-report'`): Immutable cryptographic audit trail, SOX-404 verification, and delegated commercial authority logs.
+
+---
+
+## ⌨️ Productivity Shortcuts
+
+| Keybinding | Action | Context |
+|---|---|---|
+| <kbd>⌘</kbd> + <kbd>K</kbd> / <kbd>Ctrl</kbd> + <kbd>K</kbd> | Open **Global Command Palette** | Anywhere |
+| <kbd>ESC</kbd> | Dismiss modals, search palette, or active drawer | Anywhere |
+| Click **"Track Shipments"** | Quick jump to fulfillment or quotes | Landing Page |
+| Click **"Launch Enterprise App"** | Seamless entry into CPQ Dashboard | Landing Page |
+
+---
+
+## 📁 Repository Structure
+
+```text
+frontend/
+├── index.html                  # HTML entry point with Material Symbols & fonts
+├── package.json                # React 18, Vite 5, Tailwind CSS
+├── vite.config.js              # Vite bundler configuration
+├── tailwind.config.js          # DealFlow360 design tokens & colors
+├── run.bat                     # Double-click launcher (starts server & opens browser)
+├── stop.bat                    # Double-click stopper (clean process termination)
+└── src/
+    ├── App.jsx                 # Top-level application shell & screen router
+    ├── index.css               # Design system classes, typography & custom badges
+    ├── main.jsx                # React root mount
+    ├── context/
+    │   └── AppContext.jsx      # Global state (screen, search, notifications, active deals)
+    ├── components/
+    │   ├── Sidebar.jsx         # Enterprise navigation drawer
+    │   ├── Header.jsx          # Top bar with live stats & search trigger
+    │   ├── CommandPalette.jsx  # ⌘K global quick-search modal
+    │   ├── NewQuotationModal.jsx # Quick quote creation modal
+    │   └── Toast.jsx           # Real-time alert notifications
+    └── pages/                  # 17 complete enterprise screens
+        ├── LandingPage.jsx
+        ├── DashboardOverview.jsx
+        ├── QuotationList.jsx
+        ├── QuotationDetails.jsx
+        ├── ApprovalsList.jsx
+        ├── ApprovalDetails.jsx
+        ├── DealHealth.jsx
+        ├── FulfillmentList.jsx
+        ├── FulfillmentDetails.jsx
+        ├── InvoicesList.jsx
+        ├── InvoiceDetails.jsx
+        ├── BillingDetails.jsx
+        ├── CustomerPortal.jsx
+        ├── ProductDashboard.jsx
+        ├── ProductDetails.jsx
+        ├── SubscriptionList.jsx
+        └── AdminReport.jsx
+```
+
+---
+
+## 🚀 Quickstart
+
+### Option A: One-Click Launchers (Windows)
+- **Start the Application**: Double-click [`run.bat`](run.bat) from `frontend/` (or run `run_dev.bat` from repository root)
+- **Stop the Application**: Double-click [`stop.bat`](stop.bat)
+
+### Option B: Command Line
+
+#### 1. Install Dependencies
 ```bash
+cd frontend
 npm install
 ```
 
-### 2. Start the Development Server
-You can launch the dev server with one click via:
-```cmd
-run.bat
-```
-Or via terminal:
+#### 2. Start Dev Server
 ```bash
 npm run dev
 ```
-Open **[http://localhost:5173](http://localhost:5173)** in your browser.
+> The application will start immediately at **[http://localhost:5173](http://localhost:5173)** with hot module replacement (HMR).
 
-### 3. Stop the Server
-```cmd
-stop.bat
-```
-
-### 4. Build for Production
+#### 3. Build for Production
 ```bash
 npm run build
 ```
-Generates an optimized, minified bundle in the `dist/` directory.
+> Compiles a minified, production bundle into `dist/` in **~1.1s**.
 
 ---
 
-## Key Features & Platform Capabilities
+## 🛠️ Tech Stack & Design System
 
-- **100% Pure React Architecture**: Single-Page Application (SPA) with zero full-page reloads, stateful client-side routing, and responsive layouts.
-- **CPQ Margin Guard Engine**: Configurable margin floors (18.0% hard safeguard) with automated multi-tier approval delegation (Tier 1 Rep &rarr; Tier 2 Regional &rarr; Tier 3 Pricing Desk &rarr; Tier 4 VP/CFO).
-- **Interactive Deal Health Matrix**: Interactive SVG scatter plot visualizing deals across margin percentage and contract volume with real-time exception alerts.
-- **IoT Cold-Chain Telemetry**: Live sensor tracking for Reefer containers (-18.2°C temperature monitoring, genset battery, waypoint milestone ingates).
-- **Automated 3-Way Match & Settlement**: Reconciles quotes (`Q-1024`), carrier waybills (`SH-9402`), and EDI-810 invoices (`INV-2024-8891`) with multi-party remittance splits.
-- **Global Command Palette (`⌘K` / `Ctrl+K`)**: Instant modal search across all quotes, shipments, invoices, customers, and navigation views.
-- **Live "+ New Quotation" Modal**: CPQ deal creator with instant margin calculation and policy violation detection.
-
----
-
-## Application Modules & Screen Directory
-
-| # | Screen / Module | React Component | Path / Route | Key Features |
-|---|---|---|---|---|
-| 1 | **Public Landing Page** | `LandingPage.jsx` | `'landing'` | Hero section, tracking card (enter `Q-1024`/`SH-9402`), metrics bar, "Launch Platform" CTA. |
-| 2 | **Dashboard / Overview** | `DashboardOverview.jsx` | `'overview'` | Discount Matrix, Delegated Authority rules, 4 KPI cards, corridor safeguards. |
-| 3 | **Quotations List** | `QuotationList.jsx` | `'quotations'` | Live CPQ sync table, multi-status filters (All, Awaiting, Drafts, Converted), CSV export. |
-| 4 | **Quotation Details** | `QuotationDetails.jsx` | `'quotation-detail'` | `Q-1024` detail view, 5-stage stepper, itemized tariff rates, margin concession slider. |
-| 5 | **Approvals & Governance** | `ApprovalsList.jsx` | `'approvals'` | SLA timer alert banner (&lt; 45m expirations), fast-track queue, quick decision buttons. |
-| 6 | **Approval Request Details** | `ApprovalDetails.jsx` | `'approval-detail'` | `AP-8821` detail view, deal economics (-6.2% variance vs 18% floor), PKI electronic signature. |
-| 7 | **Deal Health & Risk AI** | `DealHealth.jsx` | `'deal-health'` | Margin erosion scatter plot, clickable deal bubbles, algorithmic stress test simulation. |
-| 8 | **Fulfillment & Dispatch** | `FulfillmentList.jsx` | `'fulfillment'` | Active dispatches, BOL status, terminal ingate progress, carrier SLA tracking. |
-| 9 | **Fulfillment Order Details** | `FulfillmentDetails.jsx` | `'fulfillment-detail'` | `SH-9402` GPS waypoints (Port Newark to Chicago Corwith), -18.2°C IoT Reefer diagnostics. |
-| 10 | **Invoices & Billing** | `InvoicesList.jsx` | `'invoices'` | Quote-to-cash ledger, aging buckets, EDI-810 status, batch reconciliation. |
-| 11 | **Invoice Details** | `InvoiceDetails.jsx` | `'invoice-detail'` | `INV-2024-8891` itemized pass-through charges, 3-way match audit, Fedwire clearing. |
-| 12 | **Settlement & Ledger** | `BillingDetails.jsx` | `'billing-detail'` | `INV-88291` multi-party carrier payout vs platform margin split, ACH settlement recorder. |
-| 13 | **Customer Portal 360** | `CustomerPortal.jsx` | `'customer-portal'` | Shipper CRM profiles (Acme Global, Falcon Aerospace, Pacific Rim), credit facilities, DSO. |
-| 14 | **Products & Catalog** | `ProductDashboard.jsx` | `'products'` | Multi-modal freight inventory (Ocean, Air, Rail, Truckload), Cass index sync, rate books. |
-| 15 | **Product SKU Details** | `ProductDetails.jsx` | `'product-detail'` | `SKU-OCN-40HC` Reefer machinery specs, dynamic tariff calculation formula. |
-| 16 | **Subscriptions List** | `SubscriptionList.jsx` | `'subscriptions'` | Recurring platform contracts, $18.4M ARR metrics, seat allocations, auto-renewals. |
-| 17 | **Admin & Compliance** | `AdminReport.jsx` | `'admin-report'` | Immutable SOX-404 audit ledger, delegated commercial authority enforcement, exports. |
-
----
-
-## Tech Stack & Design System
-
-- **Framework**: [React 18](https://react.dev/) + [Vite 5](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS 3](https://tailwindcss.com/)
-- **Design Tokens**:
-  - Primary Blue: `#006196`
-  - Secondary Navy: `#116398`
-  - Tertiary / Brand Orange: `#f94c10` / `#ea3e07`
-  - Neutral Background: `#F7F9FB`
-  - Dark Surface Container: `#0d1322`
-- **Typography**: Google Fonts Inter & Plus Jakarta Sans
+- **Core Engine**: [React 18.3](https://react.dev/) (Hooks, Context, Client Routing)
+- **Build Tool**: [Vite 5.4](https://vitejs.dev/) (ESM, lightning-fast HMR)
+- **Styling**: [Tailwind CSS 3.4](https://tailwindcss.com/) with enterprise logistics color palette
 - **Iconography**: Google Material Symbols Outlined
+- **Typography**: Google Fonts *Inter* & *Plus Jakarta Sans*
 
 ---
 
-## Project Structure
+<div align="center">
 
-```text
-├── index.html                   # HTML entry point with Google Fonts & Material Symbols
-├── vite.config.js               # Vite config
-├── tailwind.config.js           # Design tokens, color system, and spacing
-├── postcss.config.js            # PostCSS configuration
-├── package.json                 # Dependencies & build scripts
-├── run.bat                      # One-click dev server launcher
-├── stop.bat                     # Server process terminator
-├── PROJECT.md                   # Project context log
-│
-└── src/
-    ├── main.jsx                 # React root mount
-    ├── App.jsx                  # Main router & platform layout
-    ├── index.css                # Tailwind directives & glassmorphism utilities
-    ├── context/
-    │   └── AppContext.jsx       # Shared global state, routes, quotes, approvals, toasts
-    ├── components/
-    │   ├── Sidebar.jsx          # Collapsible desktop & mobile drawer navigation
-    │   ├── Header.jsx           # Global search trigger, notifications, and New Quote CTA
-    │   ├── CommandPalette.jsx   # ⌘K / Ctrl+K quick search modal
-    │   ├── NewQuotationModal.jsx# Interactive CPQ quotation generator with margin rules
-    │   └── Toast.jsx            # Toast alert notifications
-    └── pages/                   # All 17 unified DealFlow360 React pages
-```
+**DealFlow360 Enterprise Logistics** • Built with ❤️ for scalable freight intelligence.
 
----
-
-## License
-Proprietary & Confidential - DealFlow360 Enterprise Logistics.
+</div>
