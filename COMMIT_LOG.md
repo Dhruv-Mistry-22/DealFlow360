@@ -26,3 +26,4 @@
 - Commit 26: Fix hydration errors in Next.js layout
 - Commit 27: Refactor pricing calculation precision
 - Commit 28: Add error boundary and toast notifications
+- Commit 29: Finalize core feature parity
