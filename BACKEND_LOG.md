@@ -10,3 +10,4 @@
 - Backend Commit 10: Add audit logging
 - Backend Commit 11: Refactor pricing math
 - Backend Commit 12: Add backend unit tests
+- Backend Commit 13: Integrate database migrations
