@@ -8,3 +8,4 @@
 - Frontend Commit 8: Create cart and margin calculator
 - Frontend Commit 9: Add Approvals Queue screen
 - Frontend Commit 10: Implement API client utility
+- Frontend Commit 11: Add role-based navigation
