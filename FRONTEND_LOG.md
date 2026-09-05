@@ -4,3 +4,4 @@
 - Frontend Commit 4: Add Login page components
 - Frontend Commit 5: Build Dashboard charts
 - Frontend Commit 6: Implement Quote Builder UI
+- Frontend Commit 7: Add product search dropdown
