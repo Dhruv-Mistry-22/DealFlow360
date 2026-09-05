@@ -1,3 +1,4 @@
 - Backend Commit 1: Init backend structure
 - Backend Commit 2: Add database models
 - Backend Commit 3: Configure SQLAlchemy
+- Backend Commit 4: Add User authentication
