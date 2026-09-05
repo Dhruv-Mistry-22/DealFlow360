@@ -2,3 +2,4 @@
 - Commit 2: Add Next.js frontend framework
 - Commit 3: Configure TailwindCSS
 - Commit 4: Add FastAPI backend framework
+- Commit 5: Setup SQLAlchemy and SQLite database
