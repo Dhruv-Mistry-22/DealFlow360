@@ -16,3 +16,4 @@
 - Commit 16: Build frontend Login page UI
 - Commit 17: Create Dashboard UI layout
 - Commit 18: Implement Quote Builder component
+- Commit 19: Add product search and cart logic
