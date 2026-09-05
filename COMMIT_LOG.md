@@ -19,3 +19,4 @@
 - Commit 19: Add product search and cart logic
 - Commit 20: Integrate margin calculation in frontend
 - Commit 21: Connect Quote Builder to backend API
+- Commit 22: Build Approvals Queue page
