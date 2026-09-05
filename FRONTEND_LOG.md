@@ -10,3 +10,4 @@
 - Frontend Commit 10: Implement API client utility
 - Frontend Commit 11: Add role-based navigation
 - Frontend Commit 12: Fix hydration mismatch errors
+- Frontend Commit 13: Refactor state management
