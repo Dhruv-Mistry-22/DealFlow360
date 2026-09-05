@@ -22,3 +22,4 @@
 - Commit 22: Build Approvals Queue page
 - Commit 23: Implement approve/reject backend actions
 - Commit 24: Add role-based UI rendering
+- Commit 25: Integrate upsell recommendation logic
