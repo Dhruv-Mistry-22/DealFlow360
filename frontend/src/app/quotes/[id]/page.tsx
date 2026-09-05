@@ -1,0 +1,1 @@
+export default function QuotePage({ params }: { params: { id: string } }) { return (<main className='p-8'><h1 className='text-2xl font-bold mb-4'>Quote #{params.id}</h1><p>Basic UI Placeholder - DealFlow360</p></main>); }
