@@ -11,3 +11,4 @@
 - Backend Commit 11: Refactor pricing math
 - Backend Commit 12: Add backend unit tests
 - Backend Commit 13: Integrate database migrations
+- Backend Commit 14: Finalize backend API
