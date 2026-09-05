@@ -1,3 +1,4 @@
 - Commit 1: Initial project structure setup
 - Commit 2: Add Next.js frontend framework
 - Commit 3: Configure TailwindCSS
+- Commit 4: Add FastAPI backend framework
