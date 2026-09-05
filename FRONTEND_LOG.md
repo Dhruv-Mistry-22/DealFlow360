@@ -5,3 +5,4 @@
 - Frontend Commit 5: Build Dashboard charts
 - Frontend Commit 6: Implement Quote Builder UI
 - Frontend Commit 7: Add product search dropdown
+- Frontend Commit 8: Create cart and margin calculator
