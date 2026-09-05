@@ -5,3 +5,4 @@
 - Commit 5: Setup SQLAlchemy and SQLite database
 - Commit 6: Create base database models
 - Commit 7: Add User and Auth models
+- Commit 8: Implement JWT authentication
