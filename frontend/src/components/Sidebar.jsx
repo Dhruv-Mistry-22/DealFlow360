@@ -14,6 +14,7 @@ export default function Sidebar() {
     { id: 'products', label: 'Products & Catalog', icon: 'inventory_2' },
     { id: 'deal-health', label: 'Deal Health & Risk', icon: 'monitoring', badge: 'Live' },
     { id: 'subscriptions', label: 'Subscriptions', icon: 'credit_card' },
+    { id: 'admin-config', label: 'Backend Config', icon: 'settings' },
     { id: 'admin-report', label: 'Admin & Governance', icon: 'admin_panel_settings' }
   ];
 

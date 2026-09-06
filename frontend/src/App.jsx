@@ -25,6 +25,7 @@ import SubscriptionList from './pages/SubscriptionList';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import AdminReport from './pages/AdminReport';
+import AdminConfig from './pages/AdminConfig';
 
 function AppContent() {
   const { currentPage, isAuthenticated } = useApp();
@@ -102,6 +103,8 @@ function AppContent() {
         return <SubscriptionList />;
       case 'admin-report':
         return <AdminReport />;
+      case 'admin-config':
+        return <AdminConfig />;
       default:
         return <DashboardOverview />;
     }

@@ -5,14 +5,54 @@ export default function FulfillmentDetails() {
   const { navigate, pageParams, addToast } = useApp();
   const orderId = pageParams.orderId || 'SH-9402';
   const [telemetryPing, setTelemetryPing] = useState(Date.now());
+  const [showBackorderPrompt, setShowBackorderPrompt] = useState(true);
+  const [backorderConsolidated, setBackorderConsolidated] = useState(false);
 
   const handleUpdateTelemetry = () => {
     setTelemetryPing(Date.now());
     addToast('Telemetry Refreshed', 'BNSF locomotive GPS & reefer temperature sync successful.', 'success');
   };
 
+  const handleConsolidateBackorder = () => {
+    setBackorderConsolidated(true);
+    setShowBackorderPrompt(false);
+    addToast('Backorder Consolidated', 'Remaining units from WH-2 have been merged into the active shipment.', 'success');
+  };
+
   return (
     <div className="flex flex-col w-full gap-spacing-lg pb-spacing-2xl">
+      {/* 🔔 Backorder Consolidation Prompt */}
+      {showBackorderPrompt && !backorderConsolidated && (
+        <div className="flex items-start gap-4 bg-amber-50 border border-amber-300 rounded-xl px-5 py-4 shadow-sm">
+          <span className="material-symbols-outlined text-amber-600 text-[24px] mt-0.5">inventory_2</span>
+          <div className="flex-1">
+            <div className="font-bold text-amber-900 text-sm">Stock Arrived — Consolidate Remaining Backorder</div>
+            <div className="text-xs text-amber-800 mt-1">
+              A new stock arrival at <strong>East Depot (WH-2)</strong> covers the remaining 14 units backordered from this shipment. Consolidate now to merge them into this active shipment and eliminate the partial backorder.
+            </div>
+          </div>
+          <div className="flex gap-2 shrink-0">
+            <button
+              onClick={handleConsolidateBackorder}
+              className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-bold transition-colors"
+            >
+              Consolidate Remaining Backorder
+            </button>
+            <button
+              onClick={() => setShowBackorderPrompt(false)}
+              className="px-3 py-2 bg-amber-100 hover:bg-amber-200 text-amber-800 rounded-lg text-xs font-semibold transition-colors"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
+      {backorderConsolidated && (
+        <div className="flex items-center gap-3 bg-emerald-50 border border-emerald-300 rounded-xl px-5 py-3">
+          <span className="material-symbols-outlined text-emerald-600 text-[20px]">check_circle</span>
+          <span className="text-sm font-semibold text-emerald-800">Backorder consolidated. All units are now in a single active shipment.</span>
+        </div>
+      )}
       {/* Top Breadcrumbs */}
       <nav className="flex items-center gap-spacing-2xs font-body-small text-body-small">
         <button onClick={() => navigate('overview')} className="text-on-surface-variant hover:text-secondary">

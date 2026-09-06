@@ -15,7 +15,11 @@ export default function ApprovalsList() {
         const pending = quotes.filter(q => q.status === 'PENDING_APPROVAL').map(q => ({
           id: `Q-${q.id.toString().padStart(4, '0')}`,
           rawId: q.id,
-          status: 'Awaiting Action'
+          status: 'Awaiting Action',
+          customer: q.customer?.name || 'Unknown Account',
+          requestor: 'System Admin',
+          volume: `$${Number(q.total_amount || 0).toLocaleString()}`,
+          date: q.created_at ? new Date(q.created_at).toLocaleDateString() : 'N/A'
         }));
         setApprovals(pending);
       } catch (err) {
@@ -27,7 +31,7 @@ export default function ApprovalsList() {
 
   const handleApproveDeal = async (id) => {
     try {
-      await api.post(`/api/v1/quotes/${id}/approve`);
+      await api.post(`/api/v1/approvals/${id}/action`, { action: 'APPROVE', comment: 'Approved by management' });
       addToast('Approved', 'Deal approved successfully.', 'success');
       setApprovals(approvals.filter(a => a.rawId !== id));
     } catch (err) {
@@ -37,7 +41,7 @@ export default function ApprovalsList() {
 
   const handleRejectDeal = async (id) => {
     try {
-      await api.post(`/api/v1/quotes/${id}/reject`, { reason: 'Rejected by management' });
+      await api.post(`/api/v1/approvals/${id}/action`, { action: 'REJECT', comment: 'Rejected by management' });
       addToast('Rejected', 'Deal has been rejected.', 'info');
       setApprovals(approvals.filter(a => a.rawId !== id));
     } catch (err) {

@@ -44,7 +44,7 @@ def seed_db():
             if not c:
                 c = Customer(
                     name=name,
-                    email=f"contact@{name.replace(' ', '').lower()}.com",
+                    email=f"contact@{name.replace(' ', '').replace('.', '').lower()}.com",
                     tier=random.choice(list(CustomerTier)),
                     company=name
                 )

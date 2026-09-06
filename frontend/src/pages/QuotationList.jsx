@@ -11,6 +11,7 @@ export default function QuotationList() {
   const [modeFilter, setModeFilter] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [selectedIds, setSelectedIds] = useState([]);
+  const [viewMode, setViewMode] = useState('list'); // 'list' | 'kanban'
 
   useEffect(() => {
     const fetchQuotes = async () => {
@@ -209,10 +210,75 @@ export default function QuotationList() {
             </button>
           )}
         </div>
+        {/* View Mode Toggle */}
+        <div className="flex items-center gap-1 bg-surface-variant p-1 rounded-lg border border-outline">
+          <button
+            onClick={() => setViewMode('list')}
+            title="List View"
+            className={`p-1.5 rounded-md transition-all ${viewMode === 'list' ? 'bg-surface shadow-sm text-primary' : 'text-on-surface-variant hover:text-on-surface'}`}
+          >
+            <span className="material-symbols-outlined text-[18px]">view_list</span>
+          </button>
+          <button
+            onClick={() => setViewMode('kanban')}
+            title="Kanban View"
+            className={`p-1.5 rounded-md transition-all ${viewMode === 'kanban' ? 'bg-surface shadow-sm text-primary' : 'text-on-surface-variant hover:text-on-surface'}`}
+          >
+            <span className="material-symbols-outlined text-[18px]">view_kanban</span>
+          </button>
+        </div>
       </div>
 
+      {/* Kanban Pipeline View */}
+      {viewMode === 'kanban' && (() => {
+        const stages = [
+          { key: 'Draft', label: 'Draft', color: 'bg-surface-variant text-on-surface-variant' },
+          { key: 'Awaiting Approval', label: 'Awaiting Approval', color: 'bg-tertiary-container text-tertiary' },
+          { key: 'Approved', label: 'Approved', color: 'bg-primary-container text-primary' },
+          { key: 'Fulfillment', label: 'Fulfillment', color: 'bg-secondary-container text-secondary' },
+          { key: 'Completed', label: 'Completed', color: 'bg-emerald-100 text-emerald-800' },
+        ];
+        return (
+          <div className="flex gap-4 overflow-x-auto pb-4">
+            {stages.map(stage => {
+              const stageQuotes = filteredQuotes.filter(q => q.status === stage.key);
+              return (
+                <div key={stage.key} className="flex-shrink-0 w-72">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${stage.color}`}>{stage.label}</span>
+                    <span className="text-xs text-on-surface-variant font-semibold">{stageQuotes.length}</span>
+                  </div>
+                  <div className="space-y-2">
+                    {stageQuotes.length === 0 ? (
+                      <div className="bg-surface border border-outline border-dashed rounded-xl p-4 text-center text-xs text-on-surface-variant">No quotes</div>
+                    ) : stageQuotes.map(q => (
+                      <div
+                        key={q.id}
+                        onClick={() => navigate('quotation-detail', { quoteId: q.rawId })}
+                        className="bg-surface border border-outline rounded-xl p-4 cursor-pointer hover:border-primary hover:shadow-sm transition-all"
+                      >
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-mono font-bold text-xs text-primary">{q.id}</span>
+                          <span className="text-xs font-bold text-on-secondary-container">{q.volume}</span>
+                        </div>
+                        <div className="font-semibold text-sm text-on-surface truncate">{q.customer}</div>
+                        <div className="text-xs text-on-surface-variant mt-1">{q.date}</div>
+                        <div className="flex items-center gap-1 mt-2">
+                          <div className="w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[9px] font-bold">{q.repAvatar}</div>
+                          <span className="text-xs text-on-surface-variant truncate">{q.rep}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })()}
+
       {/* Data Table Container */}
-      <div className="bg-surface rounded-xl shadow-sm border border-outline overflow-hidden flex flex-col">
+      {viewMode === 'list' && <div className="bg-surface rounded-xl shadow-sm border border-outline overflow-hidden flex flex-col">
         <div className="overflow-x-auto w-full">
           <table className="w-full text-left border-collapse">
             <thead>
@@ -339,7 +405,7 @@ export default function QuotationList() {
           <div className="flex items-center gap-2">
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

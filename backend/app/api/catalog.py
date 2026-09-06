@@ -1,11 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
+from pydantic import BaseModel
 
 from app.core.database import get_db
 from app.core.deps import get_current_user, require_internal, require_admin
 from app.models.user import User
 from app.models.customer import Customer
-from app.models.product import Product, ProductVariant, ProductCategory
+from app.models.product import Product, ProductVariant, ProductCategory, Warehouse
 from app.models.pricing import DiscountTier
 from app.schemas.catalog import (
     CustomerCreate,
@@ -119,10 +120,43 @@ def list_discount_tiers(
 def create_discount_tier(
     payload: DiscountTierCreate,
     db: Session = Depends(get_db),
-    _: User = Depends(require_admin),
+    _: User = Depends(require_internal),
 ):
     tier = DiscountTier(**payload.model_dump())
     db.add(tier)
     db.commit()
     db.refresh(tier)
     return tier
+
+
+# ─── WAREHOUSES ───────────────────────────────────────────────────────────────
+
+class WarehouseCreate(BaseModel):
+    name: str
+    location: str | None = None
+
+class WarehouseOut(BaseModel):
+    id: int
+    name: str
+    location: str | None = None
+
+    class Config:
+        from_attributes = True
+
+
+@router.get("/catalog/warehouses", response_model=list[WarehouseOut])
+def list_warehouses(db: Session = Depends(get_db), _: User = Depends(require_internal)):
+    return db.query(Warehouse).all()
+
+
+@router.post("/catalog/warehouses", response_model=WarehouseOut, status_code=201)
+def create_warehouse(
+    payload: WarehouseCreate,
+    db: Session = Depends(get_db),
+    _: User = Depends(require_internal),
+):
+    wh = Warehouse(name=payload.name, location=payload.location)
+    db.add(wh)
+    db.commit()
+    db.refresh(wh)
+    return wh

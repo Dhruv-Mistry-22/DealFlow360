@@ -1,19 +1,50 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import { api } from '../api';
 
 export default function ApprovalDetails() {
-  const { navigate, pageParams, handleApproveDeal, handleRejectDeal, addToast } = useApp();
-  const approvalId = pageParams.approvalId || 'AP-8821';
+  const { navigate, pageParams, addToast } = useApp();
+  const approvalId = pageParams.approvalId; // numeric quote ID
   const [comment, setComment] = useState('');
   const [signed, setSigned] = useState(false);
 
-  const onApprove = () => {
-    handleApproveDeal(approvalId);
-    setSigned(true);
+  const onApprove = async () => {
+    try {
+      await api.post(`/api/v1/approvals/${approvalId}/action`, {
+        action: 'APPROVE',
+        comment: comment || 'Approved by management'
+      });
+      setSigned(true);
+      addToast('Approved', 'Deal has been approved successfully.', 'success');
+    } catch (err) {
+      addToast('Error', err.message, 'error');
+    }
   };
 
-  const onReject = () => {
-    handleRejectDeal(approvalId);
+  const onReject = async () => {
+    try {
+      await api.post(`/api/v1/approvals/${approvalId}/action`, {
+        action: 'REJECT',
+        comment: comment || 'Rejected by management'
+      });
+      addToast('Rejected', 'Deal has been rejected.', 'info');
+      navigate('approvals');
+    } catch (err) {
+      addToast('Error', err.message, 'error');
+    }
+  };
+
+  const onReturn = async () => {
+    try {
+      await api.post(`/api/v1/approvals/${approvalId}/action`, {
+        action: 'RETURN',
+        comment: comment || 'Returned for revision'
+      });
+      addToast('Returned', 'Quote sent back to rep for revision.', 'info');
+      navigate('approvals');
+    } catch (err) {
+      addToast('Error', err.message, 'error');
+    }
   };
 
   return (
@@ -71,7 +102,7 @@ export default function ApprovalDetails() {
             <span>Reject Deal</span>
           </button>
           <button
-            onClick={() => addToast('Rework Requested', 'Feedback dispatched to Sales Rep Eleanor Vance.', 'info')}
+            onClick={onReturn}
             className="px-spacing-md py-2.5 bg-primary-container hover:bg-surface-container text-primary rounded-lg font-label-large text-label-large transition-colors shadow-sm flex items-center gap-spacing-2xs"
             type="button"
           >
