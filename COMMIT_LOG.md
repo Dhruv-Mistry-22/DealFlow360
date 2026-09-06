@@ -1,0 +1,29 @@
+- Commit 1: Initial project structure setup
+- Commit 2: Add Next.js frontend framework
+- Commit 3: Configure TailwindCSS
+- Commit 4: Add FastAPI backend framework
+- Commit 5: Setup SQLAlchemy and SQLite database
+- Commit 6: Create base database models
+- Commit 7: Add User and Auth models
+- Commit 8: Implement JWT authentication
+- Commit 9: Add Product and Catalog schemas
+- Commit 10: Create Quote and QuoteLine models
+- Commit 11: Implement core pricing engine logic
+- Commit 12: Add risk scoring logic based on discounts
+- Commit 13: Create approval workflow models
+- Commit 14: Implement automated routing for manager approvals
+- Commit 15: Add seed data script for testing
+- Commit 16: Build frontend Login page UI
+- Commit 17: Create Dashboard UI layout
+- Commit 18: Implement Quote Builder component
+- Commit 19: Add product search and cart logic
+- Commit 20: Integrate margin calculation in frontend
+- Commit 21: Connect Quote Builder to backend API
+- Commit 22: Build Approvals Queue page
+- Commit 23: Implement approve/reject backend actions
+- Commit 24: Add role-based UI rendering
+- Commit 25: Integrate upsell recommendation logic
+- Commit 26: Fix hydration errors in Next.js layout
+- Commit 27: Refactor pricing calculation precision
+- Commit 28: Add error boundary and toast notifications
+- Commit 29: Finalize core feature parity

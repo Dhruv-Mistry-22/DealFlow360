@@ -1,0 +1,111 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-tertiary-container": "#B02116",
+        "on-surface": "#001d32",
+        "on-error-container": "#93000a",
+        "on-secondary-container": "#113047",
+        "secondary-container": "#84c4fe",
+        "inverse-primary": "#95ccff",
+        "on-primary-container": "#18669B",
+        "surface-container-low": "#edf4ff",
+        "primary-container": "#EAF6FC",
+        "primary": "#006196",
+        "surface-container-lowest": "#ffffff",
+        "error-container": "#FDECEA",
+        "outline": "#DCE6EC",
+        "secondary-fixed": "#cee5ff",
+        "inverse-on-surface": "#e7f2ff",
+        "outline-variant": "#E7EEF3",
+        "tertiary-fixed-dim": "#ffb4a3",
+        "secondary": "#116398",
+        "surface-container-highest": "#cde5ff",
+        "surface-container-high": "#d7eaff",
+        "on-error": "#FFFFFF",
+        "primary-fixed-dim": "#95ccff",
+        "surface": "#FFFFFF",
+        "tertiary-container": "#dc3207",
+        "surface-container": "#e2efff",
+        "on-primary": "#ffffff",
+        "surface-variant": "#F1F5F8",
+        "tertiary": "#b22400",
+        "surface-bright": "#f7f9ff",
+        "on-primary-fixed": "#001d32",
+        "on-tertiary": "#ffffff",
+        "on-primary-fixed-variant": "#004a75",
+        "on-background": "#001d32",
+        "on-surface-variant": "#404850",
+        "on-secondary-fixed-variant": "#004a76",
+        "inverse-surface": "#14334a",
+        "on-secondary-fixed": "#001d33",
+        "background": "#F7F9FB",
+        "surface-tint": "#006399",
+        "surface-dim": "#c0ddfb",
+        "primary-fixed": "#cde5ff",
+        "tertiary-fixed": "#ffdad2",
+        "on-tertiary-fixed": "#3d0600",
+        "on-secondary": "#ffffff",
+        "error": "#B02116",
+        "secondary-fixed-dim": "#96ccff",
+        "on-tertiary-fixed-variant": "#8b1a00",
+        brand: {
+          orange: '#f94c10',
+          deepOrange: '#ea3e07',
+          accent: '#ff5500',
+          dark: '#0f172a'
+        }
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "spacing-2xs": "0.25rem",
+        "margin-desktop": "2rem",
+        "margin-mobile": "1rem",
+        "spacing-md": "1rem",
+        "spacing-xs": "0.5rem",
+        "spacing-xl": "2rem",
+        "gutter": "1rem",
+        "spacing-lg": "1.5rem",
+        "spacing-sm": "0.75rem",
+        "spacing-2xl": "3rem"
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        'title-small': ['Inter', 'sans-serif'],
+        'label-small': ['Inter', 'sans-serif'],
+        'title-large-mobile': ['Inter', 'sans-serif'],
+        'body-medium': ['Inter', 'sans-serif'],
+        'label-large': ['Inter', 'sans-serif'],
+        'label-medium': ['Inter', 'sans-serif'],
+        'body-large': ['Inter', 'sans-serif'],
+        'body-small': ['Inter', 'sans-serif'],
+        'title-large': ['Inter', 'sans-serif'],
+        'title-medium': ['Inter', 'sans-serif']
+      },
+      fontSize: {
+        'label-small': ['11px', { lineHeight: '1.3', fontWeight: '500' }],
+        'title-small': ['18px', { lineHeight: '1.4', fontWeight: '600' }],
+        'body-small': ['12px', { lineHeight: '1.5', fontWeight: '400' }],
+        'body-large': ['16px', { lineHeight: '1.5', fontWeight: '500' }],
+        'title-large-mobile': ['26px', { lineHeight: '1.25', fontWeight: '800' }],
+        'body-medium': ['14px', { lineHeight: '1.5', fontWeight: '400' }],
+        'title-medium': ['24px', { lineHeight: '1.3', fontWeight: '700' }],
+        'label-medium': ['12px', { lineHeight: '1.4', fontWeight: '600' }],
+        'label-large': ['14px', { lineHeight: '1.4', fontWeight: '600' }],
+        'title-large': ['32px', { lineHeight: '1.2', fontWeight: '800' }]
+      }
+    }
+  },
+  plugins: []
+}
