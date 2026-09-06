@@ -50,8 +50,8 @@ def approve(
     if quote.status != QuoteStatus.PENDING_APPROVAL:
         raise HTTPException(status_code=400, detail="Quote is not pending approval")
 
-    # Prevent self-approval
-    if quote.sales_rep_id == approver.id:
+    # Prevent self-approval (unless Admin)
+    if quote.sales_rep_id == approver.id and approver.role != UserRole.ADMIN:
         raise HTTPException(
             status_code=403, detail="Sales rep cannot approve their own quote"
         )
@@ -126,7 +126,7 @@ def reject(db: Session, quote_id: int, approver: User, comment: str) -> Quote:
     if quote.status != QuoteStatus.PENDING_APPROVAL:
         raise HTTPException(status_code=400, detail="Quote is not pending approval")
 
-    if quote.sales_rep_id == approver.id:
+    if quote.sales_rep_id == approver.id and approver.role != UserRole.ADMIN:
         raise HTTPException(
             status_code=403, detail="Sales rep cannot reject their own quote"
         )
