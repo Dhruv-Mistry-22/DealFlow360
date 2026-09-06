@@ -55,11 +55,36 @@ def seed_db():
 
         # Create some Products
         product_data = [
+            # Services
             ("Ocean FCL Base Freight", ProductCategory.SERVICES, 2500.0),
             ("Air Expedited Freight", ProductCategory.SERVICES, 5000.0),
             ("Truckload Intermodal", ProductCategory.SERVICES, 1200.0),
+            ("LTL Freight Routing", ProductCategory.SERVICES, 450.0),
+            ("White-Glove Final Mile Delivery", ProductCategory.SERVICES, 850.0),
+            ("Hazardous Materials Handling (HazMat)", ProductCategory.SERVICES, 1100.0),
+            ("Port Drayage & Chassis Rental", ProductCategory.SERVICES, 600.0),
+            ("Supply Chain Consulting Retainer", ProductCategory.SERVICES, 10000.0),
+            ("Expedited Freight Border Clearance", ProductCategory.SERVICES, 750.0),
+            
+            # Subscriptions
             ("Customs Brokerage Retainer", ProductCategory.SUBSCRIPTION, 500.0),
+            ("DealFlow360 Analytics Pro Plan", ProductCategory.SUBSCRIPTION, 299.0),
+            ("Warehouse Inventory API Access", ProductCategory.SUBSCRIPTION, 150.0),
+            ("Cold-Chain Monitoring SaaS", ProductCategory.SUBSCRIPTION, 350.0),
+            ("Fleet Routing Optimization AI", ProductCategory.SUBSCRIPTION, 999.0),
+            ("Compliance & Trade Audit Software", ProductCategory.SUBSCRIPTION, 450.0),
+            ("Supplier Risk Management Tool", ProductCategory.SUBSCRIPTION, 600.0),
+            ("Carbon Offset Tracking Subscription", ProductCategory.SUBSCRIPTION, 120.0),
+            
+            # Hardware
             ("Cold-Chain Telemetry Tracker", ProductCategory.HARDWARE, 150.0),
+            ("RFID Smart Pallet Tags (Box of 100)", ProductCategory.HARDWARE, 250.0),
+            ("GPS Fleet Tracking Module", ProductCategory.HARDWARE, 320.0),
+            ("Warehouse Handheld Barcode Scanner", ProductCategory.HARDWARE, 850.0),
+            ("Heavy-Duty Forklift IoT Sensor", ProductCategory.HARDWARE, 400.0),
+            ("Automated Conveyor Weight Scale", ProductCategory.HARDWARE, 3500.0),
+            ("Dock Door Security Camera", ProductCategory.HARDWARE, 550.0),
+            ("Industrial Rugged Tablet", ProductCategory.HARDWARE, 1200.0),
         ]
         products = []
         for pname, pcat, pprice in product_data:
