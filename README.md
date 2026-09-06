@@ -3,6 +3,10 @@
 > **A complete B2B Sales platform** covering everything from Quotation → Approval → Fulfillment → Billing → Customer Negotiation → Reporting, built for the Odoo 2026 Hackathon.
 
 ---
+## Team Number 9
+Dhruv Mistry (Leader)
+Chaitanaya Thakar
+Harsh Verma
 
 ## 📌 Table of Contents
 
